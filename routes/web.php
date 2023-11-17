@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\SessionController;
 use App\http\Controllers\DashboardController;
+use App\Http\Controllers\SiswaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,9 @@ Route::controller(OrderController::class)->group(function (){
     Route::get('/login/logout', [SessionController::class, 'logout']);
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('login');
+});
+Route::controller(OrderController::class)->group(function (){
+    Route::get('/siswa', [SiswaController::class, 'index']);
+    Route::get('/form/siswa', [SiswaController::class, 'form_siswa']);
+    Route::post('/form/siswa', [SiswaController::class, 'create']);
 });

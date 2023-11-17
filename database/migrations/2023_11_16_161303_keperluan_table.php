@@ -12,12 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('siswa', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nis')->unique();
-            $table->string('nama');
-            $table->enum('jurusan',['TJKT','RPL','DKV','ANIM']);
-            $table->integer('angkatan');
-            $table->string('password');
+            $table->string('kode_keperluan')->primary();
+            $table->string('keperluan');
             $table->rememberToken();
             $table->timestamps();
         });
@@ -28,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('siswa');
+        //
     }
 };
