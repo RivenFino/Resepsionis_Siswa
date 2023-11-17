@@ -29,6 +29,6 @@ Route::controller(OrderController::class)->group(function (){
 });
 Route::controller(OrderController::class)->group(function (){
     Route::get('/siswa', [SiswaController::class, 'index']);
-    Route::get('/form/siswa', [SiswaController::class, 'form_siswa']);
-    Route::post('/form/siswa', [SiswaController::class, 'create']);
+    Route::get('/form/siswa', [SiswaController::class, 'create']);
+    Route::post('/form/siswa', [SiswaController::class, 'store']);
 });
