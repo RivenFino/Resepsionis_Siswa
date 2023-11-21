@@ -2,38 +2,58 @@
 @section('title', 'Form Siswa')
 @section('container')
 
-    <div class="w-[640px] bg-neutral-200 p-8 px-6 rounded">
-        <form action="siswa" method="post" class="flex flex-col gap-2">
+    <div class="">
+        <form action="siswa" method="post" class="">
             @csrf
-            <div class="flex flex-col ">
-                <label for="nis">NIS</label>
-                <input class="h-8 px-4 pr-1 rounded" type="number" name="nis" id="nis">
+            <div class="bg-white p-4 px-4 md:p-8 mb-6 rounded-xl shadow border border-black border-opacity-25">
+                    <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
+                        <div class="text-zinc-600">
+                            <p class="font-bold text-lg">Form Siswa</p>
+                            <p>Mohon lengkapi data berikut.</p>
+                </div>
+                <br>
+
+        <div class="lg:col-span-2">
+            <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+                <form class="md:col-span-5">
+                    <label for="nis">NIS</label>
+                    <input type="number" name="nis" id="nis" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="">
+                </form>
             </div>
-            <div class="flex flex-col ">
-                <label for="nama">Nama Lengkap</label>
-                <input class="h-8 px-4 rounded" type="text" name="nama" id="nama">
+        </div>
+        
+            <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+                <form class="md:col-span-5">
+                    <label for="nama">Nama</label>
+                    <input type="text" name="nama" id="jurusan" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="">
+                </form>
             </div>
-            <div class="flex flex-col ">
-                <label for="jurusan">Jurusan</label>
-                <select class="h-8 px-4" name="jurusan" id="jurusan">
-                    <option value="TJKT">TJKT</option>
-                    <option value="RPL">RPL</option>
-                    <option value="DKV">DKV</option>
-                    <option value="ANIM">ANIM</option>
-                </select>
+            <br>
+            
+        
+            <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5">
+                <form class="md:col-span-5">
+                    <label for="jurusan">Jurusan</label>
+                    <input type="text" name="jurusan" id="jurusan" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="">
+                </form>
             </div>
-            <div class="flex flex-col ">
-                <label for="angkatan">Angkatan</label>
-                <input class="h-8 px-4 pr-1 rounded" type="number" name="angkatan" id="angkatan" min="1" max="40">
+        
+        
+            <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-5 pl-3">
+                <form class="md:col-span-5">
+                    <label for="angkatan">Angkatan</label>
+                    <input type="number" name="angkatan" id="angkatan" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="">
+                </form>
             </div>
-            <div class="flex flex-col ">
-                <label for="password">Password</label>
-                <input class="h-8 px-4 pr-1 rounded" type="password" name="password" id="password" min="1" max="40">
-            </div>
-            <div class="flex justify-end py-3 pt-4 gap-2">
-                
-                <input class="flex bg-blue-600 text-white font-bold w-40 justify-center h-12 rounded" type="submit" value="simpan">
-            </div>
+       
+
+        <div class="md:col-span-5 text-right">
+                      <div class="inline-flex items-end">
+                        <button class="bg-gray-100 hover:bg-black hover:text-white text-red-700 font-bold py-2 px-4 rounded">Submit</button>
+                      </div>
+                    </div>
+        </div>
+        </div>
         </form>
     </div>
 
