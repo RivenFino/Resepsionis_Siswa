@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('siswa', function (Blueprint $table) {
+        Schema::create('keperluan', function (Blueprint $table) {
             $table->string('kode_keperluan')->primary();
             $table->string('keperluan');
             $table->rememberToken();

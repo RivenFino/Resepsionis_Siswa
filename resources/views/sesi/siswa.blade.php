@@ -17,12 +17,9 @@
                 <div>
                     <form class="flex flex-col gap-6 mt-4 justify-normal" action="login/proses" method="post">
                         @csrf
-                        <input type="text" class="h-14 rounded-md bg-gray-50 drop-shadow-xl px-4 text-xl hover:outline-gray-300 hover:outline focus:outline-none focus:bg-blue-100 focus:px-5 focus:text-2xl uppercase" placeholder="nip" name="nip">
-                        <input type="password" class="h-14 rounded-md bg-gray-50 drop-shadow-xl px-4 text-xl hover:outline-gray-300 hover:outline focus:outline-none focus:bg-blue-100 focus:px-5 focus:text-2xl" placeholder="password" name="password">
-                        <div class="flex justify-start px-2 gap-4">
-                        </div>
-                        <div class="flex justify-center gap-4">
-                            <button class="bg-red-500 rounded-md font-bold flex w-2/3 h-14 justify-center items-center text-white" type="submit" name="login">Login</button>
+                        <input type="text" class="h-14 rounded-md bg-gray-50 drop-shadow-xl px-4 text-xl hover:outline-gray-300 hover:outline focus:outline-none focus:bg-blue-100 focus:px-5 focus:text-2xl" placeholder="NIS" name="nis">
+                        <div class="flex gap-4">
+                            <button class="bg-red-500 rounded-md font-bold flex w-full h-14 justify-center items-center text-white" type="submit" name="login">Login</button>
                         </div>
                     </form>
                 </div>

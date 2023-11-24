@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('nama');
             $table->enum('jurusan',['TJKT','RPL','DKV','ANIM']);
             $table->integer('angkatan');
-            $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });

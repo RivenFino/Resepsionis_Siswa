@@ -22,13 +22,19 @@ Route::get('/', function () {
 
 Route::controller(OrderController::class)->group(function (){
     Route::get('/login', [SessionController::class, 'index'])->middleware('logout');
+    Route::get('/loginSiswa', [SessionController::class, 'siswa'])->middleware('logout');
     Route::post('/login/proses', [SessionController::class, 'login']);
+    Route::post('/loginSiswa/proses', [SessionController::class, 'loginSiswa']);
     Route::get('/login/logout', [SessionController::class, 'logout']);
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('login');
 });
-Route::controller(OrderController::class)->group(function (){
-    Route::get('/siswa', [SiswaController::class, 'index']);
-    Route::get('/form/siswa', [SiswaController::class, 'create']);
-    Route::post('/form/siswa', [SiswaController::class, 'store']);
-});
+// Route::controller(OrderController::class)->group(function (){
+//     Route::get('/siswa', [SiswaController::class, 'index']);
+//     Route::get('/siswa/create', [SiswaController::class, 'create']);
+//     Route::post('/siswa/create', [SiswaController::class, 'store']);
+//     Route::get('/siswa/edit', [SiswaController::class, 'edit']);  
+//     Route::post('/siswa/edit', [SiswaController::class, 'update']);  
+// });
+
+Route::resource('siswa', SiswaController::class);

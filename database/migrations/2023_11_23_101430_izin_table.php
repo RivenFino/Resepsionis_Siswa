@@ -11,12 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('staf', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nip')->unique();
-            $table->string('nama');
-            $table->string('no_telepon');
-            $table->string('password');
+        Schema::create('izin', function (Blueprint $table) {
+            $table->string('kode_izin')->primary();
+            $table->string('izin');
             $table->rememberToken();
             $table->timestamps();
         });

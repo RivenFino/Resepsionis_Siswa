@@ -14,13 +14,11 @@ class SiswaSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('siswa')->insert([
-            'id' => '3',
-            'nis' => '11112',
+        DB::table('staf')->insert([
+            'nip' => '101',
             'nama'=> 'Awla',
-            'jurusan'=> 'RPL',
-            'angkatan'=> '24',
-            'password' => Hash::make('1111'),
+            'no_telepon'=> '083141976277',
+            'password' => Hash::make('101'),
         ]);
     }
 }

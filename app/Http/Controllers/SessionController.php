@@ -11,20 +11,45 @@ class SessionController extends Controller
     {
         return view('sesi/index');
     }
+    function siswa()
+    {
+        return view('sesi/siswa');
+    }
 
-    function login(Request $request)
+    function login(Request $request)    
     {
         $request->validate([
-            'nis'=>'required|numeric',
+            'nip'=>'required|numeric',
             'password'=>'required'
         ],[
-            'nis.required'=>'NIS Wajib Diisi',
+            'nip.required'=>'Mohon isi NIP',
             'password.required'=>'Password Wajib Diisi'
         ]);
 
         $infologin = [
-            'nis' => $request->nis,
+            'nip' => $request->nip,
             'password' => $request->password,
+        ];
+
+        if (Auth::attempt($infologin)) {
+            //Jika Berhasil
+            return redirect('dashboard')->with('success', 'Selamat Anda berhasil Login');
+        }else{
+            //Jika Gagal
+            return redirect('login');
+            
+        }
+    }
+    function loginSiswa(Request $request)
+    {
+        $request->validate([
+            'nis'=>'required|numeric',
+        ],[
+            'nis.required'=>'NIS Wajib Diisi',
+        ]);
+
+        $infologin = [
+            'nis' => $request->nis,
         ];
 
         if (Auth::attempt($infologin)) {
@@ -32,7 +57,7 @@ class SessionController extends Controller
             return redirect('dashboard');
         }else{
             //Jika Gagal
-            return redirect('login');
+            return redirect('loginSiswa');
         }
     }
     function logout()
