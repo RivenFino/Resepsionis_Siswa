@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Keperluan;
 use Illuminate\Database\Eloquent\Model;
 
 class Staf extends Model
@@ -14,7 +15,7 @@ class Staf extends Model
     use HasFactory;
 
     protected $table = 'staf';
-    protected $PrimaryKey = 'id';
+    protected $primaryKey = 'id';
 
     protected $fillable = [
         'nip',
@@ -22,6 +23,10 @@ class Staf extends Model
         'no_telepon',
         'password',
     ];
+
+    public function keperluan() {
+        return $this->hasMany(Keperluan::class, 'nip', 'nip');
+    }
 
     /**
      * The attributes that should be hidden for serialization.

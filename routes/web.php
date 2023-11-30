@@ -3,7 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\http\Controllers\SessionController;
 use App\http\Controllers\DashboardController;
+use App\Http\Controllers\KeperluanController;
 use App\Http\Controllers\SiswaController;
+use App\Http\Controllers\StafController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +20,7 @@ use App\Http\Controllers\SiswaController;
 */
 
 Route::get('/', function () {
-    return view('sesi/index');
+    return view('welcome');
 });
 
 Route::controller(OrderController::class)->group(function (){
@@ -37,4 +40,12 @@ Route::controller(OrderController::class)->group(function (){
 //     Route::post('/siswa/edit', [SiswaController::class, 'update']);  
 // });
 
-Route::resource('siswa', SiswaController::class);
+Route::resource('siswa', SiswaController::class)->middleware('login');
+Route::resource('staf', StafController::class)->middleware('login');
+Route::resource('keperluan', KeperluanController::class)->middleware('login');
+
+Route::get('/process-form', [KeperluanController::class, 'processForm'])->middleware('login');
+Route::post('/process-form', [KeperluanController::class, 'store'])->middleware('login');
+
+Route::get('/form', [UserController::class, 'create']);
+Route::get('/history', [UserController::class, 'index']);

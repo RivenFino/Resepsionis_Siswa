@@ -7,18 +7,18 @@ use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
-class SiswaSeeder extends Seeder
+class StafSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        DB::table('siswa')->insert([
-            'nis' => '543221082',
+        DB::table('staf')->insert([
+            'nip' => '101',
             'nama'=> 'Awla',
-            'jurusan'=> 'RPL',
-            'angkatan' => '24',
+            'no_telepon'=> '083141976277',
+            'password' => Hash::make('101'),
         ]);
     }
 }

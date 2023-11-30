@@ -3,15 +3,32 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Keperluan;
 
-class IzinController extends Controller
+use Illuminate\View\View;
+
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request):view
     {
-        //
+        $keyword = $request->get('search');
+        $perPage = 15;
+    
+        if (!empty($keyword)) {
+            $keperluan = Keperluan::where('kode_keperluan', 'LIKE', "$id")
+                ->latest()
+                ->paginate($perPage);
+        } else {
+            $keperluan = Keperluan::orderBy('tanggal', 'desc')->paginate($perPage);
+        }
+    
+        $siswa = $keperluan->pluck('siswa')->flatten()->unique();
+    
+        return view('user.index', compact('keperluan','siswa'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
     /**

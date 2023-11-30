@@ -1,6 +1,60 @@
-@extends('layouts.main')
+@extends('layouts.form')
 @section('title', 'Form Siswa')
-@section('container')
+@section('judul', 'Form Siswa')
+@section('data', 'Siswa')
+
+@section('row-3-status', 'hidden')
+@section('row-4-status', 'hidden')
+@section('row-2-status', 'hidden')
+@section('row-1-status', 'hidden')
+
+@section('deskripsi-judul', 'Silahkan lengkapi data siswa')
+@section('nav')
+<a href="{{ url('siswa/create')}}" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Siswa</a>
+<a href="{{ url('staf/create')}}" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Staf</a>
+<a href="{{ url('keperluan/create')}}" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Keperluan</a>
+@endsection
+@section('form')
+<form action="{{ route('siswa.store')}}" enctype="multipart/form-data" method="post" class="w-full max-sm:w-full px-8 h-full transition-all">
+@endsection
+@section('row-1-col-1')
+
+<label for="nis">NIS</label>
+<input type="number" name="nis" id="nis" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all" value="">
+
+@endsection
+
+@section('row-1-col-2')
+
+<label for="nama">Nama</label>
+<input type="text" name="nama" id="jurusan" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all" value="">
+
+@endsection
+@section('row-2-col-1')
+
+<label for="jurusan">Jurusan</label>
+<select name="jurusan" id="jurusan" class="h-10 border mt-1 rounded px-4 w-full focus:bg-blue-50 focus:outline-none outline-none transition-all">
+    <option selected hidden value="" ><span class="capitalize">Pilih Jurusan</option>
+    <option value="tjkt"><span class="uppercase">TJKT</span></option>
+    <option value="rpl" ><span class="uppercase">RPL</span></option>
+    <option value="dkv" ><span class="uppercase">DKV</span></option>
+    <option value="anim" ><span class="uppercase">ANIM</span></option>
+</select>
+@endsection
+@section('row-2-col-2')
+
+<label for="angkatan">Angkatan</label>
+<input type="number" name="angkatan" id="angkatan" value="20" min="1" max="40" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all">
+
+@endsection
+@section ('button')
+<div class="flex justify-end mt-5 px-8">
+    <div class="inline-flex items-end">
+        <button class="transition-all w-64 h-12 bg-blue-600 hover:bg-white hover:border hover:border-red-600 hover:text-red-600 text-gray-100 font-bold py-2 px-4 rounded">Submit</button>
+    </div>
+</div>
+@endsection
+<!-- 
     <div class="w-full flex justify-center pt-12">
 
         <div class="flex  w-[1400px]">
@@ -67,6 +121,4 @@
             </form>
         </div>
     </div>
-
-
-@endsection
+ -->

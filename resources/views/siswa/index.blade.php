@@ -1,60 +1,15 @@
-@extends('layouts.main')
+@extends('layouts.table')
 @section('title', 'Data Siswa')
-@section('container')
-@if($notif = Session::get('success'))
+@section('data', 'Siswa')
+@section('link-url', 'siswa')
+@section('link-add', 'siswa/create')
+@section('deskripsi-judul', 'Jangan ubah data Siswa jika tidak memiliki kepentingan')
 
 
 
-
-<script type="text/javascript">
-    const Toast = Swal.mixin({
-    toast: true,
-    position: "top-end",
-    showConfirmButton: false,
-    timer: 3000,
-    timerProgressBar: true,
-    didOpen: (toast) => {
-        toast.onmouseenter = Swal.stopTimer;
-        toast.onmouseleave = Swal.resumeTimer;
-    }
-    });
-    Toast.fire({
-    icon: 'success',
-    title: '{{ $notif }}'
-});
-</script>
-@endif
-<div class="flex w-full justify-center max-md:justify-start pt-12 max-md:pt-2 max-md:px-12 max-md:scale[20%] gap-4">
-    <div class="flex w-[1400px] max-md:flex-col max-md:px-2 ">
-        <div class="flex flex-col max-md:flex-row max-md:w-full w-32 max-md:h-20 h-full max-md:px-8 bg-white rounded-xl shadow border border-black border-opacity-25">
-            <span class="flex justify-center items-center text-2xl h-20 font-semibold max-md:hidden">Data</span>
-            <hr class="mx-md:hidden">
-            <div class="pt-4 max-md:pt-0 max-md:h-20 flex flex-col max-md:flex-row">
-                <a href="siswa" class="w-full max-md:h-full hover:bg-red-600 px-6 h-12 flex justify-start items-center hover:text-white">Siswa</a>
-                <a href="staf" class="w-full max-md:h-full hover:bg-red-600 px-6 h-12 flex justify-start items-center hover:text-white">Staf</a>
-                <a href="kepeluan" class="w-full max-md:h-full hover:bg-red-600 px-6 h-12 flex justify-start items-center hover:text-white">Kepeluan</a>
-            </div>
-        </div>
-        <div class="flex flex-col w-full p-4 px-0 rounded-xl shadow border border-black border-opacity-25 h-full bg-white">
-            <div class="text-zinc-600 px-8">
-                <p class="font-bold text-lg">Data Siswa</p>
-                <p>Jangan ubah data siswa jika tidak memiliki kepentingan.</p>
-            </div>
-            <hr class="mt-3">
-            <div class="flex justify-between h-16 items-center w-full gap-12 px-8 my-4 transition-all">
-                <form class="flex w-2/5" action="siswa" method="GET" accept-charset="UTF-8" role="searc">
-                    <button type="submit" class="w-16 text-white bg-blue-500 rounded-l-lg flex justify-center items-center hover:bg-white hover:border hover:border-red-600 hover:text-red-600 focus:shadow-lg transition-all"><svg xmlns="http://www.w3.org/2000/svg" class=" w-8 h-8 hover:text-red-600" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                    </svg>
-                    </button>
-                    <input class="h-12 rounded-r-lg text-gray-500 border outline-none w-full bg-gray-50 focus:bg-blue-50 px-4 focus:outline-none focus:shadow-lg focus:text-lg transition-all focus:text-black" type="text" placeholder="Cari.." name="search" value="{{request('search')}}">
-                </form>
-
-                <a href="{{url('/siswa/create')}}" class="transition-all w-32 h-12 text-white flex items-center justify-center text-xl bg-green-500 text-center hover:bg-white hover:border hover:border-red-600 hover:text-red-600 rounded-lg select-none">Tambah</a>
-            </div>
-            
-            @if(count($siswa) > 0)
-                <div class="flex flex-col gap-6 max-w-[1400px] w-full px-8 my-4">
+@section('table')                  
+    @if(count($siswa) > 0)
+                <div class="flex flex-col gap-6 w-full px-8 my-4">
                     <div class="bg-gray-50 px-0 rounded-xl shadow border border-black border-opacity-25 h-full w-full py-2">
                         <div class="flex flex-col gap-4 overflow-auto">
 
@@ -107,32 +62,7 @@
                         {{ $siswa->links('layouts.pagination')}}
                     </div>
                 </div>
-                    
             @else
                     <div class="text-xl select-none flex justify-center text-gray-500">Belum ada Data Siswa yang terdaftar</div>
             @endif
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
-    window.deleteConfirm = function (e) {
-        e.preventDefault();
-        var form = e.target.form;
-        Swal.fire({
-            title: 'Apakah anda yakin',
-            text: "Anda tidak dapat mengembalikan data ini setelah dihapus",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#e63e3e',
-            confirmButtonText: 'Ya',
-            cancelButtonText: 'Tidak'
-        }).then((result) => {
-        if(result.isConfirmed){
-            form.submit()
-        }
-        })
-    }
-</script>
-
-
 @endsection

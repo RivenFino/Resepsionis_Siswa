@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Keperluan;
 
 class Siswa extends Model
 {
@@ -21,4 +22,8 @@ class Siswa extends Model
         'jurusan',
         'angkatan',
     ];
+
+    public function keperluan() {
+        return $this->hasMany(Keperluan::class, 'nis', 'nis');
+    }
 }

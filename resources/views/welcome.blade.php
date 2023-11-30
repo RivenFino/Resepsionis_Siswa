@@ -2,8 +2,8 @@
 @section('title', 'Resepsionis Siswa')
 @section('container')
 
-    <div>
-        <div class="w-full h-screen bg-red-500"></div>
+
+        <div class="w-full h-screen bg-white"></div>
         <div class="flex justify-center items-center w-full h-screen bg-gray-300">
             <div class="w-full h-full flex justify-center items-center">
                 <div class=" w-[650px] h-[500px] bg-neutral-50 ">
@@ -22,6 +22,6 @@
             </div>
         </div>
         <div class="w-full h-screen bg-red-300"></div>
-    </div>
+
 
 @endsection
