@@ -81,6 +81,6 @@
                 </div>
                     
             @else
-                    <div class="text-xl select-none flex justify-center text-gray-500">Belum ada Data staf yang terdaftar</div>
+                    <div class="text-xl select-none flex justify-center text-gray-500">Belum ada Data Keperluan yang terdaftar</div>
             @endif
 @endsection

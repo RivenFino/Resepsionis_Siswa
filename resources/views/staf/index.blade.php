@@ -27,7 +27,7 @@
                                             <td class="text-sm text-gray-700 p-3">{{$item['nama']}}</td>
                                             <td class="text-sm w-40 text-gray-700 p-3">{{$item['no_telepon']}}</td>
                                             <td class="text-sm w-32 text-gray-700 p-3">
-                                                <div class="flex justify-center w-full h-full ">
+                                                <div class="flex justify-center w-full h-full gap-1">
                                                     <div class="flex justify-center items-center w-full h-full">
                                                         <a href="{{ route('staf.edit', $item->id)}}" class="flex items-center justify-center w-12 bg-gray-200 border border-gray-400 rounded-lg h-12 p-2 text-gray-600 hover:bg-white hover:border hover:border-yellow-600 hover:text-yellow-600 transition-all select-none">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

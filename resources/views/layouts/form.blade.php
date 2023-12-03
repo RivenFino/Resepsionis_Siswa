@@ -42,7 +42,7 @@
                         <div class="bg-white p-4 px-0 rounded-xl shadow border border-black border-opacity-25 h-full">
                             <div class="flex flex-col">
                                 @yield('form-field')
-                                <div class="flex w-full gap-6 -x py-4 text-sm px-8 max-sm:flex-col">
+                                <div class="flex w-full gap-6 py-4 text-sm px-8 max-sm:flex-col">
                                     <div class="flex flex-col w-full text-lg">
                                         @yield('row-1-col-1')
                                     </div>
@@ -52,27 +52,27 @@
                                     </div>
                                 </div>
                                 
-                                <div class="flex w-full gap-6 py-4 text-lg px-8 @yield('row-1-status') max-sm:flex-colz`">
+                                <div class="flex w-full gap-6 py-4 text-lg px-8 @yield('row-1-status') max-sm:flex-col">
                                     
                                     <div class="flex flex-col w-full text-lg">
                                         @yield('row-1')
                                     </div>
                                 </div> 
                                 
-                                <div class="flex w-full gap-6 py-4 text-lg px-8 @yield('row-2-status') max-sm:flex-colz`">
+                                <div class="flex w-full gap-6 py-4 text-lg px-8 @yield('row-2-status') max-sm:flex-col">
                                     
                                     <div class="flex flex-col w-full text-lg">
                                         @yield('row-2')
                                     </div>
                                 </div> 
-                                <div class="flex w-full gap-6 py-4 text-lg px-8 @yield('row-3-status') max-sm:flex-colz`">
+                                <div class="flex w-full gap-6 py-4 text-lg px-8 @yield('row-3-status') max-sm:flex-col">
                                     
                                     <div class="flex flex-col w-full text-lg">
                                         @yield('row-3')
                                     </div>
                                 </div> 
                                 
-                                <div class="flex w-full gap-6 py-4 text-lg px-8 @yield('row-22-status') max-sm:flex-colz`">
+                                <div class="flex w-full gap-6 py-4 text-lg px-8 @yield('row-22-status') max-sm:flex-col">
                                     <div class="flex flex-col w-full text-lg">
                                         @yield('row-2-col-1')
                                     </div>
@@ -82,7 +82,7 @@
                                     </div>
                                 </div> 
 
-                                <div class="flex w-full gap-6 py-4 text-lg px-8 @yield('row-3-status') max-sm:flex-colz`">
+                                <div class="flex w-full gap-6 py-4 text-lg px-8 @yield('row-3-status') max-sm:flex-col">
                                     <div class="flex flex-col w-full text-lg">
                                         @yield('row-3-col-1')
                                     </div>
@@ -92,7 +92,7 @@
                                     </div>
                                 </div>
                                 
-                                <div class="flex w-full gap-6 py-4 text-lg px-8 @yield('row-4-status')  @yield('row-(3-4)') max-sm:flex-colz`">
+                                <div class="flex w-full gap-6 py-4 text-lg px-8 @yield('row-4-status')  @yield('row-(3-4)') max-sm:flex-col">
                                     <div class="flex flex-col w-full text-lg">
                                         @yield('row-4-col-1')
                                     </div>

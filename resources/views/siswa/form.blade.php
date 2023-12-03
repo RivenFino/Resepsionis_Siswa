@@ -15,7 +15,7 @@
 <a href="{{ url('keperluan/create')}}" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Keperluan</a>
 @endsection
 @section('form')
-<form action="{{ route('siswa.store')}}" enctype="multipart/form-data" method="post" class="w-full max-sm:w-full px-8 h-full transition-all">
+<form action="{{ route('siswa.store')}}" enctype="multipart/form-data" method="post" class="w-full max-sm:w-full max-sm:px-3 px-8 h-full transition-all">
 @endsection
 @section('row-1-col-1')
 

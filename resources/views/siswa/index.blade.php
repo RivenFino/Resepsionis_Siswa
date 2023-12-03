@@ -9,7 +9,7 @@
 
 @section('table')                  
     @if(count($siswa) > 0)
-                <div class="flex flex-col gap-6 w-full px-8 my-4">
+                <div class="flex flex-col gap-6 w-full max-sm:px-3 px-8 my-4">
                     <div class="bg-gray-50 px-0 rounded-xl shadow border border-black border-opacity-25 h-full w-full py-2">
                         <div class="flex flex-col gap-4 overflow-auto">
 
@@ -31,7 +31,7 @@
                                             <td class="text-sm w-40 text-gray-700 p-3">{{$item['jurusan']}}</td>
                                             <td class="text-sm w-20 text-gray-700 p-3">{{$item['angkatan']}}</td>
                                             <td class="text-sm w-32 text-gray-700 p-3">
-                                                <div class="flex justify-center w-full h-full ">
+                                                <div class="flex justify-center w-full h-full gap-1">
                                                     <div class="flex justify-center items-center w-full h-full">
                                                         <a href="{{ route('siswa.edit', $item->id)}}" class="flex items-center justify-center w-12 bg-gray-200 border border-gray-400 rounded-lg h-12 p-2 text-gray-600 hover:bg-white hover:border hover:border-yellow-600 hover:text-yellow-600 transition-all select-none">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">

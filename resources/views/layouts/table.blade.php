@@ -23,13 +23,13 @@
 });
 </script>
 @endif
-<div class="flex w-full h-full max-md:flex-col max-md:px-2 max-sm:gap-4 max-md:gap-2"">
+<div class="flex w-full h-full max-md:flex-col max-md:px-2 max-sm:gap-4 max-md:gap-2 relative">
         <div class="flex relative flex-col w-full p-4 gap-4 px-0 rounded-xl shadow border border-black border-opacity-25 h-full bg-white">
             <div class="text-zinc-600 px-8 max-sm:px-3 max-sm:text-sm">
                 <p class="font-bold text-lg capitalize">Data @yield('data')</p>
                 <p>@yield('deskripsi-judul')</p>
             </div>
-            <div class="flex flex-col w-full h-full sticky top-0 gap-0">
+            <div class="flex flex-col w-full h-full sticky top-16 gap-0">
                 <div class="flex h-16 w-full justify-center flex-row max-md:flex-row max-md:w-full max-md:h-16 max-sm:px-3 max-sm:text-sm max-sm:h-12 bg-white border border-black border-opacity-10 border-x-0">
                     <a href="{{ url('siswa')}}" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Siswa</a>
                     <a href="{{ url('staf')}}" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Staf</a>

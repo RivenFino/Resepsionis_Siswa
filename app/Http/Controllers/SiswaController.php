@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use App\Models\Siswa;
+use App\Models\Keperluan;
 use Illuminate\Http\RedirectResponse;
 
 class SiswaController extends Controller
@@ -102,8 +103,10 @@ class SiswaController extends Controller
     public function destroy($id)
     {
     $siswa = Siswa::findOrFail($id);
+    $keperluan = keperluan::where('id_siswa', 'LIKE', "%$id%");
 
     $siswa->delete();
+    $keperluan->delete();
     return redirect()->route('siswa.index')
     ->with('success', 'Data Siswa berhasil dihapus');
     }

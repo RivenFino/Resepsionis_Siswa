@@ -15,7 +15,7 @@
         </style>
         <meta http-equiv="refresh" content="1200">
     </head>
-    <body class="max-w-full bg-neutral-100">
+    <body class="max-w-full bg-neutral-50">
         @if($notif = Session::get('success'))
 
 
@@ -122,7 +122,7 @@
                     </a>
                 </div>
             </nav>
-            <nav class="h-16 hidden w-full px-4 bg-gray-50 border max-md:flex justify-between items-center">
+            <nav class="h-16 hidden w-full px-4 bg-gray-50 border max-md:flex justify-between items-center sticky top-0 z-10">
                 <h2 class="text-red-600 font-bold text-2xl text-center max-md:text-lg">
                     Resepsionis
                 </h2>
@@ -167,7 +167,7 @@
                         </div>
                     </div>
                     <!-- Dropdown menu -->
-                    <div id="userDropdown" class="z-10 hidden divide-y rounded-lg shadow w-44 bg-gray-700 divide-gray-600 text-gray-200">
+                    <div id="userDropdown" class="hidden divide-y rounded-lg shadow w-44 bg-gray-700 divide-gray-600 text-gray-200">
                         <div class="px-4 py-3 text-smtext-white ga">
                         <div class="text-sm">{{ Auth::user()->nama }}</div>
                         <div class="font-medium truncate">NIP: {{ Auth::user()->nip }}</div>

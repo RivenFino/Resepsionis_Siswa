@@ -40,13 +40,13 @@
 @section ('button')
 <input type="hidden" name="hidden_id" value="{{$staf->id}}">
 <div class="flex justify-end mt-5 px-8">
-    <div class="flex w-full justify-between gap-6">
-        <div class="flex w-full justify-start gap-6">
-            <a href="{{route('staf.index')}}" class="flex justify-center items-center transition-all w-48 h-12 bg-green-500 hover:bg-white hover:border hover:border-red-600 hover:text-red-600 text-white font-bold py-2 px-4 rounded">Kembali</a>
-            <a href="{{route('staf.edit', $staf->id)}}" class="flex justify-center items-center transition-all w-48 h-12 bg-yellow-400 hover:bg-white hover:border hover:border-red-600 hover:text-red-600 text-white font-bold py-2 px-4 rounded">Reset</a>
-            <a href="reset" class="flex justify-center items-center transition-all w-48 h-12 bg-red-500 hover:bg-white hover:border hover:border-red-600 hover:text-red-600 text-white font-bold py-2 px-4 rounded">Reset Password</a>
+    <div class="flex w-full justify-between gap-6 max-sm:flex-wrap">
+        <div class="flex w-full justify-start gap-6 max-sm:flex-wrap">
+            <a href="{{route('staf.index')}}" class="flex justify-center items-center transition-all w-full h-12 bg-green-500 hover:bg-white hover:border hover:border-red-600 hover:text-red-600 text-white font-bold py-2 px-4 rounded">Kembali</a>
+            <a href="{{route('staf.edit', $staf->id)}}" class="flex justify-center items-center transition-all w-full h-12 bg-yellow-400 hover:bg-white hover:border hover:border-red-600 hover:text-red-600 text-white font-bold py-2 px-4 rounded">Reset</a>
+            <a href="reset" class="flex justify-center items-center transition-all w-full h-12 bg-red-500 hover:bg-white hover:border hover:border-red-600 hover:text-red-600 text-white font-bold py-2 px-4 rounded">Reset Password</a>
         </div>
-        <button class="transition-all w-48 h-12 bg-blue-600 hover:bg-white hover:border hover:border-red-600 hover:text-red-600 text-gray-100 font-bold py-2 px-4 rounded">Simpan</button>
+        <button class="transition-all w-72 max-sm:w-full h-12 bg-blue-600 hover:bg-white hover:border hover:border-red-600 hover:text-red-600 text-gray-100 font-bold py-2 px-4 rounded">Simpan</button>
     </div>
 
 </div>
