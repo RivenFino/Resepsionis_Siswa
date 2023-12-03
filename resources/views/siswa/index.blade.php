@@ -25,11 +25,11 @@
                                 </thead>
                                 <tbody>
                                         @foreach ($siswa as $item)
-                                        <tr class="bg-white border-gray-100 border-b-2 shadow-sm">
-                                            <td class="text-sm max-md:w-20 w-52 text-gray-700 p-3">{{$item['nis']}}</td>
-                                            <td class="text-sm text-gray-700 p-3">{{$item['nama']}}</td>
-                                            <td class="text-sm w-40 text-gray-700 p-3">{{$item['jurusan']}}</td>
-                                            <td class="text-sm w-20 text-gray-700 p-3">{{$item['angkatan']}}</td>
+                                        <tr class="bg-white border-gray-100 border-b-2 shadow-sm hover:bg-gray-100 max-sm:hover:bg-white">
+                                            <td class="text-sm max-md:w-20 w-52 text-gray-700 p-3 hover:bg-red-100 max-sm:hover:bg-white">{{$item['nis']}}</td>
+                                            <td class="text-sm text-gray-700 p-3 hover:bg-red-100 max-sm:hover:bg-white">{{$item['nama']}}</td>
+                                            <td class="text-sm w-40 text-gray-700 p-3 hover:bg-red-100 max-sm:hover:bg-white">{{$item['jurusan']}}</td>
+                                            <td class="text-sm w-20 text-gray-700 p-3 hover:bg-red-100 max-sm:hover:bg-white">{{$item['angkatan']}}</td>
                                             <td class="text-sm w-32 text-gray-700 p-3">
                                                 <div class="flex justify-center w-full h-full gap-1">
                                                     <div class="flex justify-center items-center w-full h-full">

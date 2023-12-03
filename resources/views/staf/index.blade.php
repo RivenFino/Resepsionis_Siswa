@@ -22,11 +22,11 @@
                                 </thead>
                                 <tbody>
                                         @foreach ($staf as $item)
-                                        <tr class="bg-white border-gray-100 border-b-2 shadow-sm">
-                                            <td class="text-sm max-md:w-20 w-52 text-gray-700 p-3">{{$item['nip']}}</td>
-                                            <td class="text-sm text-gray-700 p-3">{{$item['nama']}}</td>
-                                            <td class="text-sm w-40 text-gray-700 p-3">{{$item['no_telepon']}}</td>
-                                            <td class="text-sm w-32 text-gray-700 p-3">
+                                        <tr class="bg-white border-gray-100 border-b-2 shadow-sm hover:bg-gray-100 max-sm:hover:bg-white">
+                                            <td class="text-sm max-md:w-20 w-52 text-gray-700 p-3 hover:bg-red-100 max-sm:hover:bg-white">{{$item['nip']}}</td>
+                                            <td class="text-sm text-gray-700 p-3 hover:bg-red-100 max-sm:hover:bg-white">{{$item['nama']}}</td>
+                                            <td class="text-sm w-40 text-gray-700 p-3 hover:bg-red-100 max-sm:hover:bg-white">{{$item['no_telepon']}}</td>
+                                            <td class="text-sm w-32 text-gray-700 p-3 hover:bg-red-100 max-sm:hover:bg-white">
                                                 <div class="flex justify-center w-full h-full gap-1">
                                                     <div class="flex justify-center items-center w-full h-full">
                                                         <a href="{{ route('staf.edit', $item->id)}}" class="flex items-center justify-center w-12 bg-gray-200 border border-gray-400 rounded-lg h-12 p-2 text-gray-600 hover:bg-white hover:border hover:border-yellow-600 hover:text-yellow-600 transition-all select-none">

@@ -39,7 +39,7 @@
             </div>
     </div>
  
-    <div class="flex flex-wrap gap-8 h-auto justify-center items-start w-full max-md:justify-center max-sm:flex-wrap max-sm:h-full max-sm:justify-center max-md:flex-wrap max-md:h-full max-sm:py-6">
+    <div class="flex flex-wrap gap-8 h-auto justify-evenly  items-start w-full max-md:justify-center max-sm:flex-wrap max-sm:h-full max-sm:justify-center max-md:flex-wrap max-md:h-full max-sm:py-6">
         <div class="flex-row flex w-92 h-40 max-sm:h-56 bg-white shadow border border-black border-opacity-25 items-center font-medium justify-evenly" >
             <div class="flex justify-center py-6 items-center w-52 h-full gap-12 bg-red-600">
                 <a href="{{url('keperluan?search=keluar&20sekolah')}}" class="w-full h-full flex flex-col items-center justify-center">
