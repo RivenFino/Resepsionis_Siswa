@@ -135,7 +135,7 @@
                         </button>
         
                         <!-- Dropdown menu -->
-                        <div id="dropdownHover" class="z-10 hidden divide-y divide-gray-100 rounded-lg shadow w-44 bg-gray-700">
+                        <div id="dropdownHover" class="hidden divide-y divide-gray-100 rounded-lg shadow w-44 bg-gray-700 z-50">
                             <ul class="py-2 text-sm text-gray-200" aria-labelledby="dropdownHoverButton">
                             <li>
                                 <a href="{{url('/dashboard')}}" class="block px-4 py-2 hover:bg-gray-600 text-white">Dashboard</a>
@@ -167,7 +167,7 @@
                         </div>
                     </div>
                     <!-- Dropdown menu -->
-                    <div id="userDropdown" class="hidden divide-y rounded-lg shadow w-44 bg-gray-700 divide-gray-600 text-gray-200">
+                    <div id="userDropdown" class="hidden divide-y rounded-lg shadow w-44 bg-gray-700 divide-gray-600 text-gray-200 z-50">
                         <div class="px-4 py-3 text-smtext-white ga">
                         <div class="text-sm">{{ Auth::user()->nama }}</div>
                         <div class="font-medium truncate">NIP: {{ Auth::user()->nip }}</div>

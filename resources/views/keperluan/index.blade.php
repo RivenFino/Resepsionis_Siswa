@@ -17,26 +17,40 @@
                                         <th class="p-3 text-sm font-semibold tracking-wide text-start">Kode Keperluan</th>
                                         <th class="p-3 text-sm font-semibold tracking-wide text-start">NIS</th>
                                         <th class="p-3 text-sm font-semibold tracking-wide text-start">Nama Siswa</th>
-                                        <th class="p-3 text-sm font-semibold tracking-wide text-start">Keperluan</th>
+                                        <th class="p-3 text-sm font-semibold tracking-wide text-center">Keperluan</th>
                                         <th class="p-3 text-sm font-semibold tracking-wide text-start">Keterangan</th>
-                                        <th class="p-3 text-sm font-semibold tracking-wide text-start">Tanggal</th>
+                                        <th class="p-3 text-sm font-semibold tracking-wide text-center">Tanggal</th>
                                         <th class="p-3 text-sm font-semibold tracking-wide text-start">Waktu</th>
-                                        <th class="p-3 text-sm font-semibold tracking-wide text-start">Status</th>
+                                        <th class="p-3 text-sm font-semibold tracking-wide text-center">Status</th>
                                         <th class="p-3 text-center text-sm font-semibold tracking-wide">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                         @foreach ($keperluan as $item)
-                                        <tr class="bg-white border-gray-100 border-b-2 shadow-sm">
-                                            <td class="text-sm max-md:w-20 w-64 text-gray-700 p-3">{{$item->kode_keperluan}}</td>
-                                            <td class="text-sm w-32 text-gray-700 p-3">{{$item->siswa->nis}}</td>
-                                            <td class="text-sm w-56 text-gray-700 p-3">{{$item->siswa->nama}}</td>
-                                            <td class="text-sm w-40 text-gray-700 p-3">{{$item['keperluan']}}</td>
-                                            <td class="text-sm w-80 text-gray-700 p-3">{{$item['keterangan']}}</td>
-                                            <td class="text-sm w-24 text-gray-700 p-3">{{$item['tanggal']}}</td>
-                                            <td class="text-sm w-24 text-gray-700 p-3">{{$item['waktu']}}</td>
-                                            <td class="text-sm w-24 text-white p-3 ">
-                                                <span class="p-2 rounded-md flex w-full justify-center items-center
+                                        <tr class="bg-white border-gray-100 border-b-2 shadow-sm hover:bg-gray-100 max-sm:hover:bg-gray-100">
+                                            <td class="text-sm max-md:w-20 w-64 text-gray-700 p-3 hover:bg-red-100">{{$item->kode_keperluan}}</td>
+                                            <td class="text-sm w-32 text-gray-700 px3 hover:bg-red-100">{{$item->siswa->nis}}</td>
+                                            <td class="text-sm w-56 text-gray-700 p-3 hover:bg-red-100">{{$item->siswa->nama}}</td>
+                                            <td class="text-sm w-40 px-3"><span class="p-2 rounded-md flex capitalize justify-center items-center text-gray-100 text-center
+                                            @if($item['keperluan'] == 'keluar sekolah')
+                                            bg-blue-500
+                                            @elseif($item['keperluan'] == 'izin')
+                                            bg-green-500
+                                            @elseif($item['keperluan'] == 'terlambat')
+                                            bg-yellow-500
+                                            @elseif($item['keperluan'] == 'melanggar aturan')
+                                            bg-red-500
+                                            @else
+                                            bg-gray-500
+                                            @endif
+                                            ">
+                                            {{$item['keperluan']}}</td>
+                                            </span>
+                                            <td class="text-sm w-80 text-gray-700 p-3 hover:bg-red-100">{{$item['keterangan']}}</td>
+                                            <td class="text-sm w-32 text-gray-700 p-3 hover:bg-red-100 text-center">{{$item['tanggal']}}</td>
+                                            <td class="text-sm w-24 text-gray-700 p-3 hover:bg-red-100">{{$item['waktu']}}</td>
+                                            <td class="text-sm w-24 text-gray-100 p-3">
+                                                <span class="p-2 rounded-md flex w-full justify-center items-center capitalize
                                                 @if($item['status'] == 'unconfirm')
                                                 bg-yellow-500
                                                 @elseif($item['status'] == 'confirmed')

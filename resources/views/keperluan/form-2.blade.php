@@ -10,9 +10,9 @@
 
 @section('deskripsi-judul', 'Silahkan lengkapi data keperluan')
 @section('nav')
-<a href="{{ url('siswa/create')}}" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Siswa</a>
-<a href="{{ url('staf/create')}}" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Staf</a>
-<a href="{{ url('keperluan/create')}}" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Keperluan</a>
+<a href="{{ url('siswa/create')}}" class="w-auto h-full font-bold text-red-500 hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Siswa</a>
+<a href="{{ url('staf/create')}}" class="w-auto h-full font-bold text-red-500 hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Staf</a>
+<a href="{{ url('keperluan/create')}}" class="w-auto h-full font-bold text-red-500 hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Keperluan</a>
 @endsection
 @section('form')
     <form action="/process-form" enctype="multipart/form-data" method="POST" class="w-full max-sm:px-3 px-8 h-full transition-all">

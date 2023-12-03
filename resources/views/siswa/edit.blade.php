@@ -7,10 +7,11 @@
 @section('row-1-status', 'hidden')
 @section('row-3-status', 'hidden')
 @section('row-4-status', 'hidden')
+@section('data', 'edit siswa')
 @section('nav')
-    <a href="../siswa" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Siswa</a>
-    <a href="../staf" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Staf</a>
-    <a href="../keperluan" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Keperluan</a>
+    <a href="../../siswa" class="w-auto h-full font-bold text-red-500 hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Siswa</a>
+    <a href="../../staf" class="w-auto h-full font-bold text-red-500 hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Staf</a>
+    <a href="../../keperluan" class="w-auto h-full font-bold text-red-500 hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Keperluan</a>
 @endsection
 @section('deskripsi-judul', 'Mohon jangan ubah data jika tidak memilki kepentingan')
 @section('form')

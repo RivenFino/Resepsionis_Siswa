@@ -29,11 +29,11 @@
                 <p class="font-bold text-lg capitalize">Data @yield('data')</p>
                 <p>@yield('deskripsi-judul')</p>
             </div>
-            <div class="flex flex-col w-full h-full sticky top-16 gap-0">
+            <div class="flex flex-col w-full h-full sticky max-sm:top-16 top-0 gap-0">
                 <div class="flex h-16 w-full justify-center flex-row max-md:flex-row max-md:w-full max-md:h-16 max-sm:px-3 max-sm:text-sm max-sm:h-12 bg-white border border-black border-opacity-10 border-x-0">
-                    <a href="{{ url('siswa')}}" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Siswa</a>
-                    <a href="{{ url('staf')}}" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Staf</a>
-                    <a href="{{ url('keperluan')}}" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Keperluan</a>
+                    <a href="{{ url('siswa')}}" class="w-auto h-full font-bold text-red-500 hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Siswa</a>
+                    <a href="{{ url('staf')}}" class="w-auto h-full font-bold text-red-500 hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Staf</a>
+                    <a href="{{ url('keperluan')}}" class="w-auto h-full font-bold text-red-500 hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Keperluan</a>
                 </div>
                 <div class="flex  bg-white max-sm:px-3 justify-between h-16 items-center w-full gap-12 px-8 py-8 transition-all border border-black border-opacity-25 border-x-0 border-t-0">
                     <form class="flex w-full" action="@yield('link-url')" method="GET" accept-charset="UTF-8" role="searc">

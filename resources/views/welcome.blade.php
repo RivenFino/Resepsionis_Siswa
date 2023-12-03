@@ -3,7 +3,9 @@
 @section('container')
 
 
-        <div class="w-full h-screen bg-white"></div>
+        <div class="w-full h-screen flex justify-center flex-col items-center bg-white">
+            
+        </div>
         <div class="flex justify-center items-center w-full h-screen bg-gray-300">
             <div class="w-full h-full flex justify-center items-center">
                 <div class=" w-[650px] h-[500px] bg-neutral-50 ">

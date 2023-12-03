@@ -26,7 +26,7 @@ class KeperluanController extends Controller
                 ->latest()
                 ->paginate($perPage);
         } else {
-            $keperluan = Keperluan::orderBy('tanggal', 'desc')->paginate($perPage);
+            $keperluan = Keperluan::orderBy('kode_keperluan', 'desc')->paginate($perPage);
         }
     
         $siswa = $keperluan->pluck('siswa')->flatten()->unique();

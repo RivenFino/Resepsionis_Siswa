@@ -8,9 +8,9 @@
 
 @section('deskripsi-judul', 'Silahkan konfirmasi keperluan siswa')
 @section('nav')
-    <a href="../../siswa" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Siswa</a>
-    <a href="../../staf" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Staf</a>
-    <a href="../../keperluan" class="w-auto h-full hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Keperluan</a>
+    <a href="../../siswa" class="w-auto h-full font-bold text-red-500 hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Siswa</a>
+    <a href="../../staf" class="w-auto h-full font-bold text-red-500 hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Staf</a>
+    <a href="../../keperluan" class="w-auto h-full font-bold text-red-500 hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Keperluan</a>
 @endsection
 @section('form')
     <form action="{{ route('keperluan.update', $keperluan->id)}}" enctype="multipart/form-data" method="POST" class="w-full px-8 h-full transition-all">
