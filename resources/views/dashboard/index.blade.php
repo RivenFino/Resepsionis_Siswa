@@ -21,7 +21,7 @@
                     <span class="text-zinc-100 w-40  font-medium text-start">Tanggal dan waktu sekarang</span>
                 </div>
                 <h2 class="flex  max-sm:hidden justify-center items-center h-full align-middle text-5xl">|</h2>
-                <div class="flex flex-col h-full justify-center items-end font-bold">
+                <div class="flex w-52 max-sm:w-auto flex-col h-full justify-center items-end font-bold">
                     <p>{{ $date }}</p>
                     <div class="flex gap-4 text-white">
                         <p>{{$day}}</p>
@@ -100,7 +100,7 @@
                 <span class="text-xl w-52 font-semibold h-full flex items-center justify-center">Keperluan siswa yang dikonfirmasi</span>
             </div> 
              <div class="flex w-full h-full justify-center items-center">
-                <h2 class="flex justify-center items-end gap-3 text-3xl font-semibold"><span class="text-8xl flex justify-center items-center rounded-full w-auto text-gray-600">3</span> siswa</h2>
+                <h2 class="flex justify-center items-end gap-3 text-3xl font-semibold"><span class="text-8xl flex justify-center items-center rounded-full w-auto text-gray-600">{{$confirm}}</span> siswa</h2>
              </div>
              <div class="flex h-20 w-2/3 justify-center  max-sm:h-12 items-center rounded-t-xl bg-blue-400">
                 <a class="w-full h-full flex justify-center items-center text-xl text-gray-50" href="{{url('keperluan?search=confirmed')}}">Periksa</a>
