@@ -11,7 +11,7 @@
                     Data Keperluan
                 </h3>
                 <form action="{{ url()->current() }}" id="sortForm" method="GET">
-                    <select id="sortSelect" name="sort" id="" class="font-bold capitalize focus:ring-gray-600 w-40 text-gray-100 border-none rounded-lg h-12 flex justify-center items-center bg-red-600 text-xl max-sm:text-sm max-sm:h-8 max-sm:w-auto">
+                    <select id="sortSelect" name="sort" id="" class="font-bold capitalize w-40 text-red-700 border-none rounded-lg h-12 flex justify-center items-center bg-gray-300 ring-none focus:ring-3 focus:ring-red-500 text-xl max-sm:text-sm max-sm:h-8 max-sm:w-auto">
                         <option @if ($sort == 'all') selected @endif value="semua" class="capitaliz text-center items-center  bg-gray-100 text-red-500 flex">Semua</option>
                         <option @if ($sort == 'today') selected @endif value="hari_ini" class="capitaliz text-center items-center  bg-gray-100 text-red-500 flex">Hari ini</option>
                         <option @if ($sort == 'week') selected @endif value="minggu_ini" class="capitalize text-center items-center  bg-gray-100 text-red-500 flex">minggu ini</option>
@@ -24,7 +24,7 @@
                     });
                 </script>
             </div>
-            <div class="flex justify-center items-center text-xl gap-4 h-full pr-12 px-4 pl-12 max-sm:pl-0 text-white bg-gray-700 rounded-r-xl  max-sm:rounded-b-xl max-sm:py-3 max-sm:w-full max-sm:pr-0 max-sm:rounded-none  max-sm:text-sm">
+            <div class="flex justify-center items-center text-xl gap-4 h-full pr-12 px-4 pl-12 max-sm:pl-0 text-white bg-red-600 rounded-r-xl  max-sm:rounded-b-xl max-sm:py-3 max-sm:w-full max-sm:pr-0 max-sm:rounded-none  max-sm:text-sm">
                 <div class="flex justify-center items-center h-full">
                     <span class="text-zinc-100 w-40  font-medium text-start">Tanggal dan waktu sekarang</span>
                 </div>

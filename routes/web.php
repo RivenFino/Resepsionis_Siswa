@@ -22,6 +22,9 @@ use App\Http\Controllers\UserController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/home', function () {
+    return view('welcome');
+});
 
 Route::controller(OrderController::class)->group(function (){
     Route::get('/login', [SessionController::class, 'index'])->middleware('logout');
@@ -32,13 +35,6 @@ Route::controller(OrderController::class)->group(function (){
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('login');
 });
-// Route::controller(OrderController::class)->group(function (){
-//     Route::get('/siswa', [SiswaController::class, 'index']);
-//     Route::get('/siswa/create', [SiswaController::class, 'create']);
-//     Route::post('/siswa/create', [SiswaController::class, 'store']);
-//     Route::get('/siswa/edit', [SiswaController::class, 'edit']);  
-//     Route::post('/siswa/edit', [SiswaController::class, 'update']);  
-// });
 
 Route::resource('siswa', SiswaController::class)->middleware('login');
 Route::resource('staf', StafController::class)->middleware('login');
@@ -49,3 +45,6 @@ Route::post('/process-form', [KeperluanController::class, 'store'])->middleware(
 
 Route::get('/form', [UserController::class, 'create']);
 Route::get('/history', [UserController::class, 'index']);
+Route::post('/Data', [UserController::class, 'index']);
+Route::post('/process', [UserController::class, 'processForm']);
+Route::post('/process-form', [UserController::class, 'store']);

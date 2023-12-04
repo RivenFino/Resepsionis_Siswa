@@ -53,9 +53,9 @@
         </div>
 </div>
 <script type="text/javascript">
-    window.deleteConfirm = function (e) {
+    window.deleteConfirm = function (e, formId) {
         e.preventDefault();
-        var form = e.target.form;
+        var form = document.getElementById(formId);
         Swal.fire({
             title: 'Apakah anda yakin',
             text: "Anda tidak dapat mengembalikan data @yield('data') ini setelah dihapus",
@@ -71,6 +71,7 @@
         })
     }
 </script>
+
 
 
 @endsection

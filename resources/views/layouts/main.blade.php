@@ -42,9 +42,9 @@
         <div class="flex w-full max-md:flex-col">
             <nav class="flex sticky top-0 flex-col h-screen w-auto z-1000 select-none max-md:hidden" id="drawer-navigation" tabindex="-1" aria-labelledby="drawer-navigation-label">
                 <div class="flex px-12 w-full bg-gray-50 h-16 items-center justify-center border-b border-r-2 border-gray-300">
-                    <h2 class="text-red-600 font-bold text-2xl text-center">
+                    <a href="../../../../home#home" class="text-red-600 font-bold text-2xl text-center">
                         Resepsionis
-                    </h2>
+                    </a>
                 </div>
                 <div class="flex  flex-col gap-4 py-6 h-auto w-full bg-gray-50 items-center justify-center border-b border-r-2 border-gray-300" >
                     <div class="w-20 relative h-20 bg-red-600 rounded-full flex justify-center items-center drop-shadow-md shadow-md shadow-black/25 group">
