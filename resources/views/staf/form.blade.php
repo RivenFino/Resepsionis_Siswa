@@ -20,26 +20,26 @@
 @section('row-1-col-1')
 
 <label for="nip" class="uppercase">nip</label>
-<input type="number" name="nip" id="nip" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all" value="">
+<input type="number" require name="nip" id="nip" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all" value="">
 
 @endsection
 
 @section('row-1-col-2')
 
 <label for="nama">Nama</label>
-<input type="text" name="nama" id="nama" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all" value="">
+<input type="text require" name="nama" id="nama" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all" value="">
 @endsection
 
 @section('row-2-col-1')
 
 <label for="no_telepon" class="capitalize">nomor telepon</label>
-<input type="text" name="no_telepon" id="jurno_telepon" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all" value="">
+<input type="text" require name="no_telepon" id="jurno_telepon" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all" value="">
 
 @endsection
 @section('row-2-col-2')
 
 <label for="password" class="capitalize">password</label>
-<input type="password" name="password" id="password" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all" value="">
+<input type="password" require name="password" id="password" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all" value="">
 
 @endsection
 @section ('button')

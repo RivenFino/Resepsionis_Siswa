@@ -14,7 +14,6 @@ class DashboardController extends Controller
 
         $sort = $request->get('sort');
         
-        
         $now = Carbon::now();
         $monthformat = [
             '1' => 'Januari',

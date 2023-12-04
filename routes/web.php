@@ -47,4 +47,4 @@ Route::get('/form', [UserController::class, 'create']);
 Route::get('/history', [UserController::class, 'index']);
 Route::post('/Data', [UserController::class, 'index']);
 Route::post('/process', [UserController::class, 'processForm']);
-Route::post('/process-form', [UserController::class, 'store']);
+Route::post('/process-', [UserController::class, 'store']);

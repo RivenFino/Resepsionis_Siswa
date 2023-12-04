@@ -13,7 +13,7 @@
     <a href="../../keperluan" class="w-auto h-full font-bold text-red-500 hover:bg-red-600 px-6 flex justify-start items-center hover:text-white">Keperluan</a>
 @endsection
 @section('form')
-    <form action="{{ route('keperluan.update', $keperluan->id)}}" enctype="multipart/form-data" method="POST" class="w-full px-8 h-full transition-all">
+    <form action="{{ route('keperluan.update', $keperluan->id)}}" enctype="multipart/form-data" method="POST" class="w-full px-8 max-sm:px-3 h-full transition-all">
     @method('PUT')
 @endsection
 @section('row-1-col-1')

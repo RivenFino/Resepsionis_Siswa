@@ -20,20 +20,20 @@
 @section('row-1-col-1')
 
 <label for="nis">NIS</label>
-<input type="number" name="nis" id="nis" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all" value="">
+<input type="number" require name="nis" id="nis" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all" value="">
 
 @endsection
 
 @section('row-1-col-2')
 
 <label for="nama">Nama</label>
-<input type="text" name="nama" id="jurusan" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all" value="">
+<input type="text" require name="nama" id="jurusan" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all" value="">
 
 @endsection
 @section('row-2-col-1')
 
 <label for="jurusan">Jurusan</label>
-<select name="jurusan" id="jurusan" class="h-10 border mt-1 rounded px-4 w-full focus:bg-blue-50 focus:outline-none outline-none transition-all">
+<select name="jurusan" require id="jurusan" class="h-10 border mt-1 rounded px-4 w-full focus:bg-blue-50 focus:outline-none outline-none transition-all">
     <option selected hidden value="" ><span class="capitalize">Pilih Jurusan</option>
     <option value="tjkt"><span class="uppercase">TJKT</span></option>
     <option value="rpl" ><span class="uppercase">RPL</span></option>
@@ -44,7 +44,7 @@
 @section('row-2-col-2')
 
 <label for="angkatan">Angkatan</label>
-<input type="number" name="angkatan" id="angkatan" value="20" min="1" max="40" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all">
+<input type="number" require name="angkatan" id="angkatan" value="20" min="1" max="40" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all">
 
 @endsection
 @section ('button')

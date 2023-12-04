@@ -43,7 +43,8 @@
                     <input type="password" class="h-14 max-sm:h-8 max-sm:rounded-sm max-sm:text-sm max-sm:focus:text-sm rounded-md bg-gray-50 drop-shadow-xl px-4 text-xl hover:outline-gray-300 hover:outline focus:outline-none focus:bg-blue-100" placeholder="password" name="password">
                     <div class="flex justify-start px-2 gap-4">
                     </div>
-                    <div class="flex justify-center gap-4">
+                    <div class="flex w-full justify-center gap-4">
+                        <a class="bg-gray-500 max-sm:h-8 max-sm:rounded-sm rounded-md font-bold flex w-2/3 h-14 justify-center items-center text-white" href="../../home">Beranda</a>
                         <button class="bg-red-500 max-sm:h-8 max-sm:rounded-sm rounded-md font-bold flex w-2/3 h-14 justify-center items-center text-white" type="submit" name="login">Login</button>
                     </div>
                 </form>

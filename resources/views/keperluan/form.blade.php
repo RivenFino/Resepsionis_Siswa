@@ -23,7 +23,7 @@
 <div class="flex items-center flex-col justify-center  w-auto mt-12 px-8 gap-6">
     <div class="flex max-w-[400px] w-full flex-col">
         <label for="nis" class="uppercase">nis</label>
-        <input type="number" name="nis" id="nis" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all" value="">
+        <input type="number" require name="nis" id="nis" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 focus:bg-blue-50 focus:outline-none outline-none transition-all" value="">
     </div>
     <div class="flex justify-end mt-5 px-8">
         <div class="inline-flex items-end">

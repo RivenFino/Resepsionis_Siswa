@@ -28,7 +28,7 @@ class UserController extends Controller
                 $id = $siswa->id;
         
                 // Ambil data keperluan berdasarkan ID siswa
-                $keperluan = Keperluan::where('id_siswa', $id)->get(); // Gunakan get() untuk menjalankan query
+                $keperluan = Keperluan::where('id_siswa', $id)->orderBy('id', 'desc')->get(); // Gunakan get() untuk menjalankan query
         
                 // Kirim data ke halaman kedua
                 return view('user.index', ['keperluan' => $keperluan, 'siswa' => $siswa]);
@@ -68,10 +68,8 @@ class UserController extends Controller
             'nis' => 'required|exists:siswa,nis',
         ]);
 
-        // Ambil data siswa berdasarkan NIS
         $siswa = Siswa::where('nis', $request->nis)->first();
 
-        // Kirim data ke halaman kedua
         return view('user.form', ['siswa' => $siswa]);
     }
 
@@ -105,7 +103,7 @@ class UserController extends Controller
             'status' => 'unconfirm',
         ]);
     
-        return view('welcome')->with('success', 'Data berhasil ditambahkan');
+        return redirect('/');
     }
 
     /**

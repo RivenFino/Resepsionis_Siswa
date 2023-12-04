@@ -32,7 +32,7 @@
 @section('row-2')
 
 <label for="keperluan" class="capitalize">keperluan</label>
-<select name="keperluan" id="keperluan" class="h-10 border mt-1 rounded px-4 w-full focus:bg-blue-50 focus:outline-none outline-none transition-all">
+<select name="keperluan" require id="keperluan" class="h-10 border mt-1 rounded px-4 w-full focus:bg-blue-50 focus:outline-none outline-none transition-all">
     <option selected hidden value="" ><span class="capitalize">keperluan</option>
     <option value="keluar sekolah"><span class="capitalize">keluar sekolah</span></option>
     <option value="izin" ><span class="capitalize">izin</span></option>
@@ -44,7 +44,7 @@
 @section('row-3')
 
 <label for="keterangan" class="capitalize">Keterangan</label>
-<textarea type="text" name="keterangan" id="keterangan" class="h-10 max-h-20 border mt-1 rounded px-4 w-full bg-gray-50 focus:border-none focus:outline-none outline-none" value="" max="255">
+<textarea type="text" require name="keterangan" id="keterangan" class="h-10 max-h-20 border mt-1 rounded px-4 w-full bg-gray-50 focus:border-none focus:outline-none outline-none" value="" max="255">
 </textarea>
 
 @endsection

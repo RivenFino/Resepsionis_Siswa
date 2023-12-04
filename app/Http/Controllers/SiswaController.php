@@ -44,19 +44,18 @@ class SiswaController extends Controller
      */
     public function store(Request $request) 
     {
-        $siswa = new Siswa;
-        // $request->validate([
-        //     'nis' => 'required|unique:siswa,nis',
-        //     'nama' => 'required',
-        //     'jurusan' => 'required',
-        //     'angkatan' => 'required|numeric',
-        // ]);
-        // Siswa::create($request->all());
-        $siswa->nis = $request->nis;
-        $siswa->nama = $request->nama;
-        $siswa->jurusan = $request->jurusan;
-        $siswa->angkatan = $request->angkatan;
-        $siswa->save();
+        $validatedData = $request->validate([
+            'nis' => 'required|string',
+            'nama' => 'required|string',
+            'jurusan' => 'required|string',
+            'angkatan' => 'required|string',
+        ]);
+        $siswa = siswa::create([
+            'nis' => $validatedData['nis'],
+            'nama' => $validatedData['nama'],
+            'jurusan' => $validatedData['jurusan'],
+            'angkatan' => $validatedData['angkatan'],
+        ]);
 
         return redirect()->route('siswa.index')->with('success', 'Data berhasil ditambahkan');
     }

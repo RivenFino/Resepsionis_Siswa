@@ -138,6 +138,9 @@
                         <div id="dropdownHover" class="hidden divide-y divide-gray-100 rounded-lg shadow w-44 bg-gray-700 z-50">
                             <ul class="py-2 text-sm text-gray-200" aria-labelledby="dropdownHoverButton">
                             <li>
+                                <a href="../../../../#home" class="block px-4 py-2 hover:bg-gray-600 text-white">Beranda</a>
+                            </li>
+                            <li>
                                 <a href="{{url('/dashboard')}}" class="block px-4 py-2 hover:bg-gray-600 text-white">Dashboard</a>
                             </li>
                             <li>

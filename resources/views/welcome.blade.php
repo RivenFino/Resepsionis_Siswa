@@ -9,8 +9,9 @@
                     <div class="w-92 h-[700px] flex-col flex justify-center items-start gap-10 max-sm:gap-24 max-sm:-translate-y-12">
                         <h1 class="text-5xl text-red-600 font-semibold max-sm:text-3xl">Resepsionis Siswa</h1>
                         <div class="flex flex-col w-[230px] max-sm:w-full max-sm:px-8 gap-10">
-                            <div class="rounded-3xl w-full text-center bg-red-600 p-4 px-8 text-xl text-white hover:bg-red-900  transition-all capitalize"><a href="">Isi Formulir</a></div>
-                            <div class="rounded-3xl w-full text-center bg-red-600 p-4 px-8 text-xl text-white hover:bg-red-900  transition-all capitalize"><a href="#panduan">Panduan</a></div>
+                            <div class="rounded-3xl w-full text-center bg-red-600 p-4 px-8 text-xl text-white hover:bg-red-900  transition-all capitalize" id="openFormBtn2"><a href="#">Isi Formulir</a></div>
+                            <div class="rounded-3xl w-full text-center bg-red-600 p-4 px-8 text-xl text-white hover:bg-red-900  transition-all capitalize" id="openDataBtn2"><a href="#">Periksa Data</a></div>
+                            <div class="rounded-3xl w-full text-center bg-gray-600 p-4 px-8 text-xl text-white hover:bg-gray-900 max-sm:bg-gray-900 transition-all capitalize"><a href="#panduan">Panduan</a></div>
                         </div>
                     </div>
                 </div>
@@ -27,7 +28,7 @@
             </div>
             <div class="w-92 max-sm:w-48 h-full flex justify-center items-center ">
                 <p class="w-80 text-xl max-sm:text-sm text-justify">
-                    Resepsionis Siswa bertujuan memudahkan siswa mencatat keperluan jika ingin keluar sekolah selama kegiatan belajar mengajar (KBM) berlangsung.  
+                    bertujuan memudahkan siswa mencatat keperluan jika ingin keluar sekolah selama kegiatan belajar mengajar (KBM) berlangsung.  
                 </p>
             </div>
         </div>
@@ -37,7 +38,7 @@
             </h2>
             <div class="h-auto flex gap-8 max-xl:flex-col justify-center items-center max-sm:hidden">
                 <div class="flex h-full w-full items-center gap-8">
-                    <div class="flex justify-center items-center bg-gray-50 w-64 h-64 text-xl text-gray-700 rounded p-6 text-center">Buka Formulir Keperluan</div>
+                    <div id="openFormBtn3" class="flex cursor-pointer justify-center items-center bg-gray-50 w-64 h-64 text-xl text-gray-700 rounded p-6 text-center">Buka Formulir Keperluan</div>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-gray-100 w-12 h-12">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" />
                     </svg>
