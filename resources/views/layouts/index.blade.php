@@ -66,7 +66,7 @@
                             </button>
                         </div>
                         <div class="flex flex-col h-auto items-center bg-white">
-                            <a id="tombolHome" href="../../../../#home" class="text-2xl flex items-center w-full justify-start px-4 border-b py-6  font-semibold hover:text-red-600">Beranda</a>
+                            <a id="tombolHome" href="../../../../home#home" class="text-2xl flex items-center w-full justify-start px-4 border-b py-6  font-semibold hover:text-red-600">Beranda</a>
                             <a id="tombolPanduan" href="../../../../home#panduan" onclick="scrollToElement('panduan')" id="tombolPanduan" class="text-2xl flex items-center w-full justify-start px-4 border-b py-6  font-semibold hover:text-red-600">Panduan</a>
                             <a href="login" class="text-2xl flex items-center w-full justify-start px-4 border-b py-6  font-semibold hover:text-red-600">Masuk</a>
                         </div>

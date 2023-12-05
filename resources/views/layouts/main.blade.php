@@ -65,7 +65,7 @@
                                     <path fill="#f3f4f6" d="M28.16 17.28a1 1 0 0 0-1.41 1.41L30.13 22H25v2h5.13l-3.38 3.46a1 1 0 1 0 1.41 1.41l5.84-5.8Z"  class="clr-i-solid clr-i-solid-path-2"  />
                                     <path fill="none" d="M0 0h36v36H0z" />
                                 </svg>
-                                <p>Logout</p>
+                                <p>Keluar</p>
                             </div>
                         </a>
                     </div>
@@ -117,7 +117,7 @@
                                 <path fill="#f3f4f6" d="M28.16 17.28a1 1 0 0 0-1.41 1.41L30.13 22H25v2h5.13l-3.38 3.46a1 1 0 1 0 1.41 1.41l5.84-5.8Z"  class="clr-i-solid clr-i-solid-path-2"  />
                                 <path fill="none" d="M0 0h36v36H0z" />
                             </svg>
-                            <p>Logout</p>
+                            <p>Keluar</p>
                         </div>
                     </a>
                 </div>
@@ -176,7 +176,7 @@
                         <div class="font-medium truncate">NIP: {{ Auth::user()->nip }}</div>
                         </div>
                         <div class="">
-                            <a href="/login/logout" class="block px-4 py-2 text-sm bg-gray-800  border-white rounded-b-lg hover:bg-gray-600">Log Out</a>
+                            <a href="/login/logout" class="block px-4 py-2 text-sm bg-gray-800  border-white rounded-b-lg hover:bg-gray-600">Keluar</a>
                         </div>
                     </div>
                 </div>
