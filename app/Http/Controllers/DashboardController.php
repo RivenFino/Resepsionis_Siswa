@@ -16,28 +16,28 @@ class DashboardController extends Controller
         
         $now = Carbon::now();
         $monthformat = [
-            0 => 'Januari',
-            1 => 'Februari',
-            2 => 'Maret',
-            3 => 'April',
-            4 => 'Mei',
-            5 => 'Juni',
-            6 => 'Juli',
-            7 => 'Agustus',
-            8 => 'September',
-            9 => 'Oktober',
-            10 => 'November',
-            11 => 'Desember'
+            '01' => 'Januari',
+            '02' => 'Februari',
+            '03' => 'Maret',
+            '04' => 'April',
+            '05' => 'Mei',
+            '06' => 'Juni',
+            '07' => 'Juli',
+            '08' => 'Agustus',
+            '09' => 'September',
+            '10' => 'Oktober',
+            '11' => 'November',
+            '12' => 'Desember'
         ];
+        
+        
+        $dateday = $now->format('d');
+        $dateyear = $now->format('Y');
+        $month = $monthformat[date('m')];
+        $date = $dateday.'-'.$month.'-'.$dateyear;
         
         $weekStartDate = Carbon::now()->startOfWeek();
         $monthStartDate = Carbon::now()->startOfMonth();
-        
-        $month = $monthformat[!date("m") ?? !date('m')];
-        $dateday = $now->format('d');
-        $dateyear = $now->format('Y');
-        $date = $dateday.'-'.$month.'-'.$dateyear;
-
 
 
         $confirmed = DB::table('keperluan')
