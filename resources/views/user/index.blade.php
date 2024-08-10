@@ -1,4 +1,4 @@
-@extends('layouts/index')
+@extends('layouts/index2')
 
 @section('container')
 <div class="w-full h-full p-3 z">

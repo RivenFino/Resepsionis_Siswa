@@ -2,7 +2,7 @@
 @section('title', 'Dashboard')
 @section('container')
 
-<div class="flex h-full max-sm:px-2 max-sm:justify-start max-sm:h-full flex-col items-center justify-around gap-8  max-sm:gap-4 select-none">
+<div class="flex flex-wrap h-full max-sm:px-2 max-sm:justify-start max-sm:h-full flex-col items-center justify-around gap-8  max-sm:gap-4 select-none">
 
     <div class="flex max-sm:flex-row bg-white justify-between  max-sm:justify-evenly px-12 rounded-xl shadow border pr-0 h-24 border-black border-opacity-25 w-full gap-8 max-sm:gap-4 max-sm:px-0 max-sm:flex-wrap max-sm:h-full max-sm:p-2  max-sm:pb-0">
 

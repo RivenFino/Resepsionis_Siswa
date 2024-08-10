@@ -15,7 +15,7 @@ return new class extends Migration
             $table->increments('id');
             $table->string('kode_keperluan')->unique();
             $table->string('id_siswa')->index();
-            $table->index('id_siswa')->references('id')->on('siswa')->onDelete('cascade');;
+            // $table->index('id_siswa')->references('id')->on('siswa')->onDelete('cascade');;
             $table->enum('keperluan', ['melanggar aturan', 'keluar sekolah', 'izin', 'terlambat']);
             $table->string('keterangan');
             $table->date('tanggal');

@@ -36,10 +36,10 @@
                                                               
                                                         </a>
                                                     </div>
-                                                    <form class="flex justify-center items-center w-full h-full" method="POST" action="{{ route('staf.destroy', $item->id) }}">
+                                                    <form id="form_{{ $item['id']}}" class="flex justify-center items-center w-full h-full" method="POST" action="{{ route('staf.destroy', $item->id) }}">
                                                         @method('delete')
                                                         @csrf
-                                                        <button onclick="deleteConfirm(event)" class="flex items-center justify-center w-12 bg-gray-200 border border-gray-400 rounded-lg h-12 p-2 text-gray-600 hover:bg-white hover:border hover:border-red-600 hover:text-red-600 transition-all select-none">
+                                                        <button onclick="deleteConfirm(event, 'form_{{ $item->id}}')" class="flex items-center justify-center w-12 bg-gray-200 border border-gray-400 rounded-lg h-12 p-2 text-gray-600 hover:bg-white hover:border hover:border-red-600 hover:text-red-600 transition-all select-none">
                                                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m6 4.125l2.25 2.25m0 0l2.25 2.25M12 13.875l2.25-2.25M12 13.875l-2.25 2.25M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
                                                               </svg>

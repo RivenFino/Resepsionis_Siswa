@@ -15,10 +15,10 @@ class SiswaSeeder extends Seeder
     public function run(): void
     {
         DB::table('siswa')->insert([
-            'nis' => '543221082',
+            'nis'=> 123,
             'nama'=> 'Awla',
-            'jurusan'=> 'RPL',
-            'angkatan' => '24',
+            'jurusan'=> 'rpl',
+            'angkatan'=> 24,
         ]);
     }
 }

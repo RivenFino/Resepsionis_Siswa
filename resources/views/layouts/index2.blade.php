@@ -38,16 +38,16 @@
         </script>
         @endif
         <nav class="w-full flex h-24 max-sm:h-20 justify-center items-center fixed top-0 z-10 transition-all ">
-            <div class="flex justify-between items-center w-[1500px] px-0 h-full max-sm:w-full max-sm:px-4 ">
+            <div class="flex justify-between items-center w-[1400px] h-full max-sm:w-full max-sm:px-4 ">
 
-                <a href="home#home" class="flex w-full max-sm:w-48 items-center justify-start px-12 h-full">
+                <a href="home#home" class="flex w-full max-sm:w-48 items-center justify-center px-12 h-full">
                     <div class="flex w-full h-full"><img src="{{asset('img/Telkom-School.svg')}}" alt="School Title" class="max-sm:w-full max-sm:scale-[150%] max-sm:-translate-x-6"> </div>
                 </a>
-                <div class="flex w-full h-full items-center justify-end max-sm:hidden">
-                    {{-- <a href="../../../home#home" id="openDataBtn" class="hover:cursor px-8 text-2xl flex items-center font-semibold hover:text-red-600 h-full">Data</a>
-                    <a href="../../../home#home" id="openFormBtn" class="px-8 text-2xl flex items-center font-semibold hover:text-red-600 h-full">Isi Formulir</a>
-                    <a class="px-8 text-2xl flex items-center font-semibold hover:text-red-600 h-full" href="../../../../home#panduan">Panduan</a> --}}
-                    <a class="px-8 text-2xl flex items-center font-semibold h-full justify-center py-4" href="login"><span class="hover:bg-white text-center px-6 flex items-center hover:text-red-600 rounded-3xl text-white h-full bg-red-600 ring-red-400 hover:ring transition-all">Masuk</span></a>
+                <div class="flex w-full h-full items-center justify-center max-sm:hidden">
+                    <a href="../../../home#home" id="openDataBtn" class="hover:cursor px-6 text-2xl flex items-center font-semibold hover:text-red-600 h-full">Data</a>
+                    <a href="../../../home#home" id="openFormBtn" class="px-6 text-2xl flex items-center font-semibold hover:text-red-600 h-full">Isi Formulir</a>
+                    <a class="px-6 text-2xl flex items-center font-semibold hover:text-red-600 h-full" href="../../../../home#panduan">Panduan</a>
+                    <a class="px-6 text-2xl flex items-center font-semibold h-full justify-center py-4" href="login"><span class="hover:bg-white text-center px-6 flex items-center hover:text-red-600 rounded-3xl text-white h-full bg-red-600 ring-red-400 hover:ring transition-all">Masuk</span></a>
                 </div>
                 <div class="lg:hidden">
                     <button id="openModalBtn" class="text-2xl px-2 py-1 font-semibold text-white bg-red-500 rounded">
@@ -183,46 +183,6 @@
             closeHome.addEventListener('click', function() {
                 navModal.classList.add('hidden');
             });
-        </script>
-        <script> //Data
-            var openDataBtn = document.getElementById('openDataBtn');
-            var openDataBtn2 = document.getElementById('openDataBtn2');
-            var closeDataBtn = document.getElementById('closeDataBtn');
-            var dataFormModal = document.getElementById('dataForm');
-            
-            openDataBtn.addEventListener('click', function() {
-                dataFormModal.classList.remove('hidden');
-            });
-            openDataBtn2.addEventListener('click', function() {
-                dataFormModal.classList.remove('hidden');
-            });
-            
-            closeDataBtn.addEventListener('click', function() {
-                dataFormModal.classList.add('hidden');
-            });
-            
-            </script>
-        <script> //Form
-            var openFormBtn = document.getElementById('openFormBtn');
-            var openFormBtn2 = document.getElementById('openFormBtn2');
-            var openFormBtn3 = document.getElementById('openFormBtn3');
-            var closeFormBtn = document.getElementById('closeFormBtn');
-            var FormModal = document.getElementById('Form');
-            
-            openFormBtn.addEventListener('click', function() {
-                FormModal.classList.remove('hidden');
-            });
-            openFormBtn2.addEventListener('click', function() {
-                FormModal.classList.remove('hidden');
-            });
-            openFormBtn3.addEventListener('click', function() {
-                FormModal.classList.remove('hidden');
-            });
-            
-            closeFormBtn.addEventListener('click', function() {
-                FormModal.classList.add('hidden');
-            });
-
         </script>
 
 

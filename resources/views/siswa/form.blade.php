@@ -50,7 +50,7 @@
 @section ('button')
 <div class="flex justify-end mt-5 px-8">
     <div class="inline-flex items-end">
-        <button class="transition-all w-64 h-12 bg-blue-600 hover:bg-white hover:border hover:border-red-600 hover:text-red-600 text-gray-100 font-bold py-2 px-4 rounded">Submit</button>
+        <button class="transition-all w-64 h-12 bg-blue-600 hover:bg-white hover:border hover:border-red-600 hover:text-red-600 text-gray-100 font-bold py-2 px-4 rounded">Simpan</button>
     </div>
 </div>
 @endsection

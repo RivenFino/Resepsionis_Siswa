@@ -16,27 +16,27 @@ class DashboardController extends Controller
         
         $now = Carbon::now();
         $monthformat = [
-            '1' => 'Januari',
-            '2' => 'Februari',
-            '3' => 'Maret',
-            '4' => 'April',
-            '5' => 'Mei',
-            '6' => 'Juni',
-            '7' => 'Juli',
-            '8' => 'Agustus',
-            '9' => 'September',
-            '10' => 'Oktober',
-            '11' => 'November',
-            '12' => 'Desember'
+            0 => 'Januari',
+            1 => 'Februari',
+            2 => 'Maret',
+            3 => 'April',
+            4 => 'Mei',
+            5 => 'Juni',
+            6 => 'Juli',
+            7 => 'Agustus',
+            8 => 'September',
+            9 => 'Oktober',
+            10 => 'November',
+            11 => 'Desember'
         ];
-        $month = $monthformat[date("m")];
+        
+        $weekStartDate = Carbon::now()->startOfWeek();
+        $monthStartDate = Carbon::now()->startOfMonth();
+        
+        $month = $monthformat[!date("m") ?? !date('m')];
         $dateday = $now->format('d');
         $dateyear = $now->format('Y');
         $date = $dateday.'-'.$month.'-'.$dateyear;
-
-        $weekStartDate = Carbon::now()->startOfWeek();
-        $monthStartDate = Carbon::now()->startOfMonth();
-
 
 
 
@@ -44,7 +44,6 @@ class DashboardController extends Controller
         ->where('status', 'confirmed')
         ->whereBetween('tanggal', [$weekStartDate, $weekStartDate->copy()->endOfWeek()])
         ->count();
-
 
         $dayformat = [
             'Sunday' => 'Minggu',

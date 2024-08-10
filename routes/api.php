@@ -14,6 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get("/siswa", [SiswaController::class, 'index']);
-Route::get("/siswa/create", [SiswaController::class, 'create']);
-Route::post("/siswa/create", [SiswaController::class, 'store']);
+// Route::resource('siswa', SiswaController::class);

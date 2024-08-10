@@ -6,31 +6,31 @@
         <div id="home" class="w-full h-screen max-sm:h-full flex justify-center flex-col items-centermax-sm:h-full bg-fixed bg-cover bg-no-repeat" style="background-image: url(https://www.smktelkom-bjb.sch.id/web/assets/img/hero-bg.png);">
             <div class="flex w-full h-full max-sm:flex-col max-sm:justify-evenly">
                 <div class="w-full h-full max-sm:h-screen flex justify-center items-center max-sm:px-4">
-                    <div class="w-92 h-[700px] flex-col flex justify-center items-start gap-10 max-sm:gap-24 max-sm:-translate-y-12">
-                        <h1 class="text-5xl text-red-600 font-semibold max-sm:text-3xl">Resepsionis Siswa</h1>
-                        <div class="flex flex-col w-[230px] max-sm:w-full max-sm:px-8 gap-10">
-                            <div class="rounded-3xl w-full text-center bg-red-600 p-4 px-8 text-xl text-white hover:bg-red-900  transition-all capitalize" id="openFormBtn2"><a href="#">Isi Formulir</a></div>
-                            <div class="rounded-3xl w-full text-center bg-red-600 p-4 px-8 text-xl text-white hover:bg-red-900  transition-all capitalize" id="openDataBtn2"><a href="#">Periksa Data</a></div>
-                            <div class="rounded-3xl w-full text-center bg-gray-600 p-4 px-8 text-xl text-white hover:bg-gray-900 max-sm:bg-gray-900 transition-all capitalize"><a href="#panduan">Panduan</a></div>
+                    <div class="w-92 h-[700px] flex-col flex justify-center items-start gap-16 max-sm:gap-24 max-sm:-translate-y-12">
+                        <h1 class="text-7xl text-red-600 font-semibold max-sm:text-3xl">Resepsionis Siswa</h1>
+                        <div class="flex flex-col w-[340px] max-sm:w-full max-sm:px-8 gap-10">
+                            <div class="rounded-full w-full text-center bg-red-600 p-4 px-8 text-3xl text-white hover:bg-red-900  transition-all capitalize" id="openFormBtn2"><a href="#">Isi Formulir</a></div>
+                            <div class="rounded-full w-full text-center bg-red-600 p-4 px-8 text-3xl text-white hover:bg-red-900  transition-all capitalize" id="openDataBtn2"><a href="#">Periksa Data</a></div>
+                            <div class="rounded-full w-full text-center bg-gray-600 p-4 px-8 text-3xl text-white hover:bg-gray-900 max-sm:bg-gray-900 transition-all capitalize"><a href="#panduan">Panduan</a></div>
                         </div>
                     </div>
                 </div>
                 <div class="w-full h-full flex justify-center items-center">
-                    <div class="overflow-hidden flex justify-center items-center w-[600px] max-sm:w-full bg-no-repeat h-[600px] max-sm:h-full rounded-full max-sm:rounded-none bg-slate-300 max-sm:translate-y-0 shadow-lg">
-                        <img class="object-cover w-full h-full" src="{{asset('img/SMK-Telkom-Banjarbaru.jpg')}}" alt="Gambar Sekolah">
-                    </div>
+                    <p class="flex justify-start py-40 text-3xl text-semibold font-serif items-start w-[600px] max-sm:w-full bg-no-repeat h-[600px] max-sm:h-full max-sm:rounded-none">
+                        Bertujuan memudahkan siswa mencatat keperluan jika ingin keluar sekolah selama kegiatan belajar mengajar (KBM) berlangsung.  
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="flex justify-center p-6 items-center w-full h-72 gap-24 bg-white border-t max-sm:gap-6">
-            <div class="w-92 max-sm:w-48 h-full flex justify-center items-center">
+        <div class="flex justify-center p-6 items-center w-full h-16 gap-24 bg-white border-t max-sm:gap-6">
+            {{-- <div class="w-92 max-sm:w-48 h-full flex justify-center items-center">
                 <h2 class="text-4xl text-center max-sm:text-2xl text-red-600 font-semibold">Resepsionis Siswa</h2>
             </div>
             <div class="w-92 max-sm:w-48 h-full flex justify-center items-center ">
                 <p class="w-80 text-xl max-sm:text-sm text-justify">
                     bertujuan memudahkan siswa mencatat keperluan jika ingin keluar sekolah selama kegiatan belajar mengajar (KBM) berlangsung.  
                 </p>
-            </div>
+            </div> --}}
         </div>
         <div id="panduan" class="w-full py-auto py-40 flex flex-col justify-start  gap-24 items-center h-full xl:h-screen bg-red-500">
             <h2 class="text-4xl text-center max-sm:text-2xl text-gray-100 font-semibold">

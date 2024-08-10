@@ -1,4 +1,4 @@
-@extends('layouts/index')
+@extends('layouts/index2')
 
 @section('container')
 <div class="h-auto w-full mt-32 flex flex-col items-center">
